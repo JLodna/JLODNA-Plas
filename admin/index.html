@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>JLODNA Plas Admin Center</title>
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="48x48"><link rel="apple-touch-icon" href="/assets/icons/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/css/admin.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+</head>
+<body class="admin">
+<div id="login" hidden>
+  <form class="form-card" id="login-form" novalidate>
+    <img src="/assets/logo/logo.webp" alt="JLODNA Plas" width="150" height="96" style="margin:0 auto 12px;height:80px;width:auto">
+    <h1 style="font-size:1.5rem;text-align:center">Admin Center</h1>
+    <div class="field"><label for="email">Email administrateur</label><input id="email" type="email" required autocomplete="username"></div>
+    <div class="field"><label for="password">Mot de passe</label><input id="password" type="password" required autocomplete="current-password"></div>
+    <p class="err-msg" id="err" role="alert"></p>
+    <button class="btn primary block" id="btn">Se connecter</button>
+  </form>
+</div>
+<div id="app" hidden>
+  <header class="a-top"><button class="icon-btn" id="a-menu" aria-label="Menu">☰</button><img src="/assets/logo/logo.webp" alt="JLODNA Plas" width="80" height="51" style="height:36px;width:auto"><strong class="a-title">Admin Center</strong>
+    <div id="notif-root" class="notif" hidden></div><span class="muted a-role" id="a-role"></span><button class="btn ghost sm" id="a-out">Déconnexion</button></header>
+  <aside class="a-side" id="a-side" aria-label="Navigation admin"></aside>
+  <section class="a-main" id="view" tabindex="-1"></section>
+</div>
+<script type="module" src="/admin/js/admin.js"></script>
+</body>
+</html>
