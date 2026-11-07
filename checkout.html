@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Commander — JLODNA Plas</title>
+<meta name="description" content="Finalisez votre commande JLODNA Plas.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://www.jlodna.com/checkout">
+<meta property="og:type" content="website"><meta property="og:site_name" content="JLODNA Plas">
+<meta property="og:title" content="Commander — JLODNA Plas"><meta property="og:description" content="Finalisez votre commande JLODNA Plas.">
+<meta property="og:url" content="https://www.jlodna.com/checkout"><meta property="og:image" content="https://www.jlodna.com/assets/icons/icon-512.png"><meta property="og:locale" content="fr_HT">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Commander — JLODNA Plas"><meta name="twitter:description" content="Finalisez votre commande JLODNA Plas."><meta name="twitter:image" content="https://www.jlodna.com/assets/icons/icon-512.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png"><link rel="apple-touch-icon" href="/assets/icons/icon-180.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"JLODNA Plas","url":"https://www.jlodna.com","logo":"https://www.jlodna.com/assets/icons/icon-512.png","email":"jloodna@gmail.com","areaServed":"HT"}</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div id="app-header"></div>
+<main id="main">
+
+<div class="wrap"><h1 style="font-size:2rem;padding-top:20px">Commander</h1><div id="co-root"><div class="layout2">
+<form id="co-form" novalidate><div class="two">
+<div class="field"><label for="full_name">Nom complet</label><input id="full_name" name="full_name" required autocomplete="name"></div>
+<div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel"></div></div>
+<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+<div class="field"><label for="address">Adresse</label><input id="address" name="address" required autocomplete="street-address"></div>
+<div class="two"><div class="field"><label for="city">Ville</label><input id="city" name="city" required autocomplete="address-level2"></div>
+<div class="field"><label for="department">Département</label><select id="department" name="department" required><option value="">Choisir…</option><option>Ouest</option><option>Nord</option><option>Nord-Est</option><option>Nord-Ouest</option><option>Artibonite</option><option>Centre</option><option>Sud</option><option>Sud-Est</option><option>Grand’Anse</option><option>Nippes</option></select></div></div>
+<div class="field"><label for="notes">Informations supplémentaires (facultatif)</label><textarea id="notes" name="notes" maxlength="1000"></textarea></div>
+<fieldset style="border:0;padding:0;margin:0 0 14px"><legend style="font-weight:600;margin-bottom:6px">Mode de paiement</legend><div id="pay"></div></fieldset>
+<p class="err-msg" id="co-err" role="alert"></p>
+<button class="btn primary block" id="co-btn" type="submit">Confirmer la commande</button></form>
+<aside class="summary" id="co-sum"></aside></div></div></div>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/checkout.js"></script>
+</body>
+</html>

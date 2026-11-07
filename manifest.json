@@ -1,0 +1,52 @@
+{
+  "name": "JLODNA Plas — Magazin global en Haïti",
+  "short_name": "JLODNA Plas",
+  "description": "Boutique en ligne JLODNA Plas : commandez et suivez vos achats en Haïti.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "id": "/",
+  "categories": [
+    "shopping",
+    "business"
+  ],
+  "shortcuts": [
+    {
+      "name": "Boutique",
+      "url": "/shop"
+    },
+    {
+      "name": "B2B — Achat en gros",
+      "short_name": "B2B",
+      "url": "/b2b"
+    },
+    {
+      "name": "Mon BIO",
+      "short_name": "BIO",
+      "url": "/bio/edit"
+    },
+    {
+      "name": "Mes commandes",
+      "short_name": "Commandes",
+      "url": "/orders"
+    }
+  ]
+}

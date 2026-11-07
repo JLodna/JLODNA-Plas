@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Créer un compte — JLODNA Plas</title>
+<meta name="description" content="Créez votre compte JLODNA Plas pour commander et suivre vos commandes.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://www.jlodna.com/register">
+<meta property="og:type" content="website"><meta property="og:site_name" content="JLODNA Plas">
+<meta property="og:title" content="Créer un compte — JLODNA Plas"><meta property="og:description" content="Créez votre compte JLODNA Plas pour commander et suivre vos commandes.">
+<meta property="og:url" content="https://www.jlodna.com/register"><meta property="og:image" content="https://www.jlodna.com/assets/icons/icon-512.png"><meta property="og:locale" content="fr_HT">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Créer un compte — JLODNA Plas"><meta name="twitter:description" content="Créez votre compte JLODNA Plas pour commander et suivre vos commandes."><meta name="twitter:image" content="https://www.jlodna.com/assets/icons/icon-512.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png"><link rel="apple-touch-icon" href="/assets/icons/icon-180.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"JLODNA Plas","url":"https://www.jlodna.com","logo":"https://www.jlodna.com/assets/icons/icon-512.png","email":"jloodna@gmail.com","areaServed":"HT"}</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div id="app-header"></div>
+<main id="main">
+
+<div class="wrap"><form class="form-card" id="reg-form" novalidate><h1 style="font-size:1.8rem">Créer un compte</h1>
+<div class="two"><div class="field"><label for="first_name">Prénom</label><input id="first_name" required autocomplete="given-name"></div>
+<div class="field"><label for="last_name">Nom</label><input id="last_name" required autocomplete="family-name"></div></div>
+<div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"></div>
+<div class="field"><label for="phone">Téléphone</label><input id="phone" type="tel" required autocomplete="tel"></div>
+<div class="field"><label for="password">Mot de passe (8 caractères minimum)</label><input id="password" type="password" minlength="8" required autocomplete="new-password"></div>
+<div class="field"><label for="password2">Confirmer le mot de passe</label><input id="password2" type="password" required autocomplete="new-password"></div>
+<div id="captcha" style="margin:8px 0"></div><p class="err-msg" id="err" role="alert"></p>
+<button class="btn primary block" id="btn">Créer mon compte</button>
+<p>Déjà inscrit ? <a href="/login"><strong>Se connecter</strong></a></p></form></div>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/register.js"></script>
+</body>
+</html>

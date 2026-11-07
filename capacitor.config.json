@@ -1,0 +1,12 @@
+{
+  "appId": "com.jlodna.plas",
+  "appName": "JLODNA Plas",
+  "webDir": "android-www",
+  "server": {
+    "url": "https://www.jlodna.com",
+    "cleartext": false,
+    "allowNavigation": ["www.jlodna.com", "jlodna.com", "*.stripe.com", "*.paypal.com", "*.paypalobjects.com", "*.moncashbutton.digicelgroup.com", "challenges.cloudflare.com"]
+  },
+  "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": false },
+  "plugins": { "PushNotifications": { "presentationOptions": ["badge", "sound", "alert"] } }
+}

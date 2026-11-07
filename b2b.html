@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B2B — Achat en gros et commandes spéciales — JLODNA Plas</title>
+<meta name="description" content="Achat en gros, devis et commandes spéciales pour les professionnels : demandez vos tarifs à JLODNA Plas.">
+
+<link rel="canonical" href="https://www.jlodna.com/b2b">
+<meta property="og:type" content="website"><meta property="og:site_name" content="JLODNA Plas">
+<meta property="og:title" content="B2B — Achat en gros et commandes spéciales — JLODNA Plas"><meta property="og:description" content="Achat en gros, devis et commandes spéciales pour les professionnels : demandez vos tarifs à JLODNA Plas.">
+<meta property="og:url" content="https://www.jlodna.com/b2b"><meta property="og:image" content="https://www.jlodna.com/assets/icons/icon-512.png"><meta property="og:locale" content="fr_HT">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="B2B — Achat en gros et commandes spéciales — JLODNA Plas"><meta name="twitter:description" content="Achat en gros, devis et commandes spéciales pour les professionnels : demandez vos tarifs à JLODNA Plas."><meta name="twitter:image" content="https://www.jlodna.com/assets/icons/icon-512.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png"><link rel="apple-touch-icon" href="/assets/icons/icon-180.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"JLODNA Plas","url":"https://www.jlodna.com","logo":"https://www.jlodna.com/assets/icons/icon-512.png","email":"jloodna@gmail.com","areaServed":"HT"}</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div id="app-header"></div>
+<main id="main">
+<div class="wrap" style="padding-top:20px;padding-bottom:40px">
+<h1 style="font-size:2rem">B2B — Espace professionnel</h1>
+<p class="muted" style="max-width:640px;margin:8px 0 18px">Commerçants, entreprises, revendeurs : achetez en gros, demandez un tarif professionnel, un devis ou une commande spéciale. Notre équipe commerciale vous répond.</p>
+<form class="form-card" id="b2b-form" novalidate style="max-width:680px;margin:0 0 32px">
+<h2 style="font-size:1.3rem;margin-bottom:12px">Nouvelle demande</h2>
+<div class="two"><div class="field"><label for="b-name">Nom complet *</label><input id="b-name" required autocomplete="name" maxlength="120"></div>
+<div class="field"><label for="b-company">Entreprise (facultatif)</label><input id="b-company" autocomplete="organization" maxlength="160"></div></div>
+<div class="two"><div class="field"><label for="b-phone">Téléphone *</label><input id="b-phone" type="tel" required autocomplete="tel" maxlength="30"></div>
+<div class="field"><label for="b-email">Adresse électronique *</label><input id="b-email" type="email" required autocomplete="email" maxlength="200"></div></div>
+<div class="two"><div class="field"><label for="b-country">Pays *</label><input id="b-country" required list="b-countries" autocomplete="country-name" maxlength="80"><datalist id="b-countries"><option value="Haïti"><option value="République dominicaine"><option value="États-Unis"><option value="Canada"><option value="France"></datalist></div>
+<div class="field"><label for="b-type">Type de demande *</label><select id="b-type" required><option value="wholesale">Achat en gros</option><option value="special_order">Commande spéciale</option><option value="quote">Demande de devis</option><option value="supply">Approvisionnement professionnel</option><option value="other">Autre demande commerciale</option></select></div></div>
+<div class="field"><label for="b-product">Produit recherché *</label><input id="b-product" required maxlength="300"></div>
+<div class="two"><div class="field"><label for="b-qty">Quantité souhaitée *</label><input id="b-qty" type="number" min="1" max="10000000" step="1" inputmode="numeric" required></div>
+<div class="field"><label for="b-budget">Budget approximatif (facultatif)</label><input id="b-budget" maxlength="60" placeholder="Ex. 5 000 USD"></div></div>
+<div class="field"><label for="b-desc">Description de la demande *</label><textarea id="b-desc" required minlength="5" maxlength="4000"></textarea></div>
+<div class="field"><label for="b-file">Image ou document (facultatif — JPG, PNG, WebP ou PDF, 10 Mo max)</label><input id="b-file" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"></div>
+<div class="hp" aria-hidden="true"><label>Ne pas remplir <input id="b-web" tabindex="-1" autocomplete="off"></label></div>
+<p class="muted" style="font-size:.82rem;margin-bottom:10px">Vos informations servent uniquement à traiter votre demande. Elles ne sont ni vendues ni partagées.</p>
+<p class="err-msg" id="b-err" role="alert"></p><button class="btn primary block" id="b-btn">Envoyer ma demande</button></form>
+<div id="b-done" class="order-card" hidden></div>
+<section id="mes-demandes" aria-labelledby="md-title"><h2 id="md-title" style="font-size:1.4rem;margin-bottom:10px">Mes demandes</h2><div id="mine"></div></section>
+</div></main>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/b2b.js"></script>
+</body>
+</html>

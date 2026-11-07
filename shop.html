@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boutique — JLODNA Plas</title>
+<meta name="description" content="Parcourez tous les produits JLODNA Plas : recherche, filtres par catégorie et prix, tri par nouveauté ou popularité.">
+
+<link rel="canonical" href="https://www.jlodna.com/shop">
+<meta property="og:type" content="website"><meta property="og:site_name" content="JLODNA Plas">
+<meta property="og:title" content="Boutique — JLODNA Plas"><meta property="og:description" content="Parcourez tous les produits JLODNA Plas : recherche, filtres par catégorie et prix, tri par nouveauté ou popularité.">
+<meta property="og:url" content="https://www.jlodna.com/shop"><meta property="og:image" content="https://www.jlodna.com/assets/icons/icon-512.png"><meta property="og:locale" content="fr_HT">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Boutique — JLODNA Plas"><meta name="twitter:description" content="Parcourez tous les produits JLODNA Plas : recherche, filtres par catégorie et prix, tri par nouveauté ou popularité."><meta name="twitter:image" content="https://www.jlodna.com/assets/icons/icon-512.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png"><link rel="apple-touch-icon" href="/assets/icons/icon-180.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"JLODNA Plas","url":"https://www.jlodna.com","logo":"https://www.jlodna.com/assets/icons/icon-512.png","email":"jloodna@gmail.com","areaServed":"HT"}</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div id="app-header"></div>
+<main id="main">
+
+<div class="wrap"><div class="shop-top"><h1 style="font-size:2rem;margin:0" id="shop-title">Boutique</h1><span class="muted" id="shop-count"></span></div>
+<div class="filters" id="categories">
+<select id="f-cat" aria-label="Catégorie"><option value="">Toutes les catégories</option></select>
+<select id="f-sort" aria-label="Trier"><option value="new">Nouveautés</option><option value="popular">Popularité</option><option value="price_asc">Prix croissant</option><option value="price_desc">Prix décroissant</option></select>
+<input id="f-min" type="number" min="0" inputmode="numeric" placeholder="Prix min (G)" aria-label="Prix minimum"><input id="f-max" type="number" min="0" inputmode="numeric" placeholder="Prix max (G)" aria-label="Prix maximum"></div>
+<div class="grid-p" id="grid" style="margin-top:16px"></div>
+<div class="pager"><button class="btn ghost" id="more" hidden>Charger plus de produits</button></div></div>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/shop.js"></script>
+</body>
+</html>

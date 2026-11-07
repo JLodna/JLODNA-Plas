@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /account
+Disallow: /bio/edit
+Disallow: /cart
+Disallow: /checkout
+Disallow: /orders
+Sitemap: https://www.jlodna.com/sitemap.xml
