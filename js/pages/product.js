@@ -37,7 +37,7 @@ function render(p) {
   <div><h1 style="font-size:1.8rem">${esc(p.name)}</h1>
     <p class="price" id="price"></p><p class="stock" id="stock" aria-live="polite"></p><p class="muted" id="sku"></p>
     <div id="variants"></div>
-    <div class="field"><label for="qty">Quantité</label><div class="qty"><button type="button" id="q-" aria-label="Moins">−</button><input id="qty" type="number" value="1" min="1" max="99" inputmode="numeric"><button type="button" id="q+" aria-label="Plus">+</button></div></div>
+    <div class="field"><label for="qty">Quantité</label><div class="qty"><button type="button" id="qm" aria-label="Moins">−</button><input id="qty" type="number" value="1" min="1" max="99" inputmode="numeric"><button type="button" id="qp" aria-label="Plus">+</button></div></div>
     <div class="row"><button class="btn primary" id="add">Ajouter au panier</button><button class="btn dark" id="buy">Acheter maintenant</button></div>
     <div class="prose" style="padding-top:20px;white-space:pre-line">${esc(p.description || '')}</div></div></div>`;
 
@@ -70,7 +70,7 @@ function render(p) {
     clamp();
   };
   refresh();
-  $('#q-').onclick = () => { q.value = +q.value - 1; clamp(); }; $('#q+').onclick = () => { q.value = +q.value + 1; clamp(); }; q.onchange = clamp;
+  $('#qm').onclick = () => { q.value = +q.value - 1; clamp(); }; $('#qp').onclick = () => { q.value = +q.value + 1; clamp(); }; q.onchange = clamp;
   root.querySelectorAll('.thumbs button').forEach((b) => (b.onclick = () => { const i = imgs[+b.dataset.i]; $('#main-img').src = i.url; root.querySelectorAll('.thumbs button').forEach((x) => x.removeAttribute('aria-current')); b.setAttribute('aria-current', 'true'); }));
   const add = (go) => { const v = current(); if (!v || availableOf(v) <= 0) return; addItem(v.id, p.id, +q.value, availableOf(v)); if (go) location.href = '/checkout'; };
   $('#add').onclick = () => add(false); $('#buy').onclick = () => add(true);
