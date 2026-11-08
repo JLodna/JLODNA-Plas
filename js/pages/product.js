@@ -19,7 +19,7 @@ const root = $('#pp');
     render(p); reviews(p); similar(p); seo(p);
     { const h = document.createElement('p'); h.className = 'muted'; h.style.cssText = 'text-align:center;font-size:.85rem'; root.after(h); reportButton(h, { type: 'product', target: p.id }); }
   } catch (e) { root.innerHTML = errorState('Erreur : ' + (e?.message || e)); }
-  )();
+  })();
 
 function render(p) {
   let variants = activeVariants(p);
