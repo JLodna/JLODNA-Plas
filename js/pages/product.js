@@ -18,8 +18,8 @@ const root = $('#pp');
     if (!p) { root.innerHTML = emptyState('Ce produit est introuvable.', '<a class="btn primary" href="/shop">Retour à la boutique</a>'); return; }
     render(p); reviews(p); similar(p); seo(p);
     { const h = document.createElement('p'); h.className = 'muted'; h.style.cssText = 'text-align:center;font-size:.85rem'; root.after(h); reportButton(h, { type: 'product', target: p.id }); }
-  } catch { root.innerHTML = errorState(); }
-})();
+  } catch (e) { root.innerHTML = errorState('Erreur : ' + (e?.message || e)); }
+  )();
 
 function render(p) {
   let variants = activeVariants(p);
