@@ -1,4 +1,4 @@
-# JLODNA Plas — Magazin global en Haïti
+# JLODNA Plas.
 
 Boutique en ligne : HTML/CSS/JavaScript modulaire (sans framework) + Supabase (PostgreSQL, Auth, Storage, Realtime, RLS) + Vercel.
 Domaine principal : **https://www.jlodna.com** (`jlodna.com` redirige en 301 vers `www`). Email administrateur : `jlodnaplas@gmail.com`.
