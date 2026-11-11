@@ -1,0 +1,41 @@
+/* JLodna Plas. — accueil premium. À charger APRÈS style.css et responsive.css */
+body{padding-bottom:84px;background:var(--g50)}
+/* slider */
+.slider{position:relative;overflow:hidden;background:#000}
+.slides{display:flex;transition:transform .5s ease}
+.slide{min-width:100%;color:#fff;position:relative;overflow:hidden}
+.slide .wrap{padding-top:36px;padding-bottom:48px;position:relative;z-index:1}
+.slide h1{max-width:12ch;margin-bottom:.2em}.slide h1 em,.slide h2 em{font-style:normal;color:var(--orange)}
+.slide h3{color:var(--orange);margin:0 0 .6em}.slide p{max-width:34ch;color:var(--g300)}
+.slide .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.slide .btn.ghost{border-color:#fff;color:#fff;background:transparent}
+.slide .ico{position:absolute;right:16px;bottom:18px;font-size:5rem;opacity:.9}
+.slide.s2{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#000}.slide.s2 em{color:#fff}.slide.s2 p{color:#222}
+.slide.s3{background:#1c1c1a}
+.slide h2{font-size:clamp(1.6rem,6vw,2.6rem);font-weight:800;max-width:14ch}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:2}
+.dots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer;transition:width .2s}
+.dots button[aria-current=true]{width:22px;border-radius:4px;background:var(--orange)}
+/* catégories (cartes générées par home.js : .cat) */
+.cats{grid-template-columns:repeat(3,1fr);gap:10px}
+.cat{min-height:96px;background:#fff;border:0;border-radius:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:.85rem;transition:transform .15s,box-shadow .15s}
+.cat:active{transform:scale(.94)}.cat:hover{box-shadow:0 6px 16px rgba(255,122,26,.25)}
+/* produits */
+.product{border:0;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:transform .2s}.product:active{transform:scale(.98)}
+.hscroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 16px 14px;margin:0 -16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.hscroll::-webkit-scrollbar{display:none}
+.hscroll>*{flex:0 0 44%;max-width:210px;scroll-snap-align:start}
+.cta-main{min-height:56px;font-size:1.05rem;box-shadow:0 8px 20px rgba(255,122,26,.4);margin:8px 0 12px}.cta-main:active{transform:scale(.97)}
+/* navigation basse */
+.bnav{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;justify-content:space-around;background:#fff;border-top:1px solid var(--g100);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.bnav a{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;min-height:48px;text-decoration:none;font-size:.7rem;font-weight:600;color:var(--g500)}
+.bnav .i{font-size:1.35rem;line-height:1}
+.bnav a[aria-current=page]{color:var(--orange-d)}
+.bnav a[aria-current=page]::before{content:"";position:absolute;top:-7px;width:28px;height:3px;border-radius:2px;background:var(--orange)}
+/* apparition */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
+/* mode sombre prêt */
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--white:#161616;--black:#f5f5f3;--g50:#0d0d0d;--g100:#2a2a27;--g500:#a5a59d}
+.bnav,.cat,.card,.site-header{background:#161616;color:#f5f5f3}}
+@media (min-width:700px){.cats{grid-template-columns:repeat(6,1fr)}.grid-p{grid-template-columns:repeat(4,1fr)}.hscroll>*{flex-basis:210px}.slide .wrap{padding-top:60px;padding-bottom:70px}}
+@media (min-width:900px){.bnav{display:none}body{padding-bottom:0}}
