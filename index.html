@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/responsive.css"><link rel="stylesheet" href="/css/home.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"JLodna Plas.","url":"https://www.jlodna.com","logo":"https://www.jlodna.com/assets/icons/icon-512.png","email":"jloodna@gmail.com","areaServed":"HT","description":"Plas. Marché"}</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -27,25 +27,68 @@
 <div id="app-header"></div>
 <main id="main">
 
-<section class="hero"><div class="dot-big" aria-hidden="true"></div><div class="wrap">
-<h1>JLodna <em>Plas.</em></h1>
-<h3><em>Pi gro mache tout en goud ayisyen !</em></h3>
-<p>Tout ce qu’il vous faut, commandé en quelques secondes et livré chez vous.</p>
-<div class="cta"><a class="btn primary" href="/shop">Voir la boutique</a><a class="btn ghost" href="/shop?sort=new">Nouveautés</a></div></div></section>
+<section class="slider" aria-roledescription="carrousel" aria-label="Promotions">
+<div class="slides" id="slides">
+  <div class="slide"><div class="dot-big" aria-hidden="true"></div><div class="wrap">
+    <h1>JLodna <em>Plas.</em></h1>
+    <h3>Tout sa ou bezwen, nan yon sèl plas !</h3>
+    <p>Tout ce qu’il vous faut, commandé en quelques secondes et livré chez vous.</p>
+    <div class="cta"><a class="btn primary" href="/shop">Acheter maintenant</a><a class="btn ghost" href="/shop?sort=new">Nouveautés</a></div>
+    <span class="ico" aria-hidden="true">🛒</span></div></div>
+  <div class="slide s2"><div class="wrap">
+    <h2>Pi gro mache <em>tout en goud ayisyen !</em></h2>
+    <p>Des promotions toute la semaine.</p>
+    <div class="cta"><a class="btn dark" href="/shop?sale=1">Voir les promos</a></div>
+    <span class="ico" aria-hidden="true">🔥</span></div></div>
+  <div class="slide s3"><div class="wrap">
+    <h2>Nouveautés <em>chak jou</em></h2>
+    <p>Un catalogue qui s’agrandit chaque semaine.</p>
+    <div class="cta"><a class="btn primary" href="/shop?sort=new">Découvrir</a></div>
+    <span class="ico" aria-hidden="true">✨</span></div></div>
+</div>
+<div class="dots" id="dots"></div>
+</section>
+
 <div class="wrap">
 <section class="block"><div class="sec-head"><h2>Catégories</h2><a href="/shop">Tout voir</a></div><div class="cats" id="cats"></div></section>
-<section class="block"><div class="sec-head"><h2>Produits populaires</h2><a href="/shop?sort=popular">Voir plus</a></div><div class="grid-p" id="popular"></div></section>
-<section class="block"><div class="sec-head"><h2>Nouveautés</h2><a href="/shop?sort=new">Voir plus</a></div><div class="grid-p" id="news"></div></section>
-<section class="block" id="sale-sec"><div class="sec-head"><h2>Produits en promotion</h2><a href="/shop?sale=1">Voir plus</a></div><div class="grid-p" id="sale"></div></section>
+<section class="block rv"><div class="sec-head"><h2>Produits populaires</h2><a href="/shop?sort=popular">Voir plus</a></div><div class="grid-p" id="popular">
+<div class="card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div><div class="card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div></div></section>
+<section class="block rv"><div class="sec-head"><h2>Nouveautés</h2><a href="/shop?sort=new">Voir plus</a></div><div class="grid-p" id="news">
+<div class="card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div><div class="card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div></div></section>
+<section class="block rv" id="sale-sec"><div class="sec-head"><h2>Produits en promotion</h2><a href="/shop?sale=1">Voir plus</a></div><div class="grid-p" id="sale"></div></section>
 <section class="block"><div class="promo"><div><h2>Livraison partout en Haïti</h2><p id="promo-text">Commandez maintenant et payez à la livraison.</p></div><a class="btn dark" href="/shop">Commander</a></div></section>
-<section class="block"><div class="sec-head"><h2>Recommandés pour vous</h2></div><div class="grid-p" id="reco"></div></section>
+<section class="block rv"><div class="sec-head"><h2>Recommandés pour vous</h2></div><div class="hscroll" id="reco">
+<div class="card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div><div class="card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div></div></section>
 <section class="block"><h2>Pourquoi acheter chez JLodna Plas</h2><div class="why">
 <div><h3>Paiement à la livraison</h3><p>Vous payez quand vous recevez votre commande.</p></div>
 <div><h3>Suivi en temps réel</h3><p>Chaque étape de votre commande vous est notifiée tout de suite.</p></div>
 <div><h3>Choix mondial</h3><p>Un catalogue qui s’agrandit chaque semaine.</p></div></div></section>
+<a class="btn primary block cta-main" href="/shop">🛒 Acheter maintenant</a>
 </div>
 </main>
 <div id="app-footer"></div>
+
+<nav class="bnav" aria-label="Navigation principale">
+<a href="/" aria-current="page"><span class="i" aria-hidden="true">🏠</span>Accueil</a>
+<a href="/shop"><span class="i" aria-hidden="true">🛍</span>Boutique</a>
+<a href="/favorites"><span class="i" aria-hidden="true">❤️</span>Favoris</a>
+<a href="/cart"><span class="i" aria-hidden="true">🛒</span>Panier</a>
+<a href="/account"><span class="i" aria-hidden="true">👤</span>Compte</a>
+</nav>
+
 <script type="module" src="/js/pages/home.js"></script>
+<script>
+(()=>{
+const sl=document.getElementById("slides"),dots=document.getElementById("dots"),n=sl.children.length;let i=0,t,x0=0;
+for(let k=0;k<n;k++){const b=document.createElement("button");b.setAttribute("aria-label","Bannière "+(k+1));b.onclick=()=>go(k,1);dots.append(b)}
+function go(k,r){i=(k+n)%n;sl.style.transform="translateX(-"+i*100+"%)";[...dots.children].forEach((d,j)=>d.toggleAttribute("aria-current",j===i));if(r)start()}
+function start(){clearInterval(t);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)t=setInterval(()=>go(i+1),4500)}
+sl.addEventListener("touchstart",e=>x0=e.touches[0].clientX,{passive:true});
+sl.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(i+(d<0?1:-1),1)});
+go(0);start();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+})();
+</script>
 </body>
-  </html>
+</html>
