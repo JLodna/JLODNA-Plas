@@ -21,6 +21,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="/js/config.js"></script>
+<script>
+/* JLodni : bulle remontée au-dessus de la barre du bas (mobile). Doit s'exécuter avant widget.js */
+window.JLODNI_CONFIG = Object.assign({ offsetRight: 16, offsetBottom: matchMedia('(max-width:899px)').matches ? 84 : 16 }, window.JLODNI_CONFIG || {});
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
