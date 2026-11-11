@@ -90,8 +90,6 @@ function start(){clearInterval(t);if(!matchMedia("(prefers-reduced-motion:reduce
 sl.addEventListener("touchstart",e=>x0=e.touches[0].clientX,{passive:true});
 sl.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(i+(d<0?1:-1),1)});
 go(0);start();
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
-document.querySelectorAll(".rv").forEach(e=>io.observe(e));
 })();
 </script>
 </body>
